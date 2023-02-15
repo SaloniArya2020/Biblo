@@ -58,7 +58,7 @@ class _SearchScreenState extends State<SearchScreen> {
               children: [
                 /// text form field for search
                 TextFormField(
-                  validator: (val)=>val!.isEmpty?'Please fill the field':null,
+                  validator: (val)=>val!.trim().isEmpty?'Please fill the field':null,
                   controller: _queryController,
                   decoration: InputDecoration(
                       hintText: 'Search here...',
